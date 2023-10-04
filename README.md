@@ -1,2 +1,4 @@
 # restaurant-profit-projector
-A breakeven streamlit dashboard for projecting profit scenarios
+A streamlit dashboard for projecting breakeven profit scenarios
+
+Run the dashboard with this command: `streamlit run breakeven.py`
