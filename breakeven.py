@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 
+# https://docs.streamlit.io/library/api-reference
 st.title("Restaurant Profit Analysis")
 costs = st.number_input("Daily Restaurant Costs (Pesos)", key="costs", value=2700, step=50)
 corn_dogs_price = st.number_input("Corn Dogs Price (Pesos)", key="corn_dogs", value=35)
@@ -12,8 +13,8 @@ onion_rings_sold = st.slider("Onion Rings Orders Sold", value=20)
 profit = (
     (corn_dogs_sold * corn_dogs_price) + (onion_rings_sold * onion_rings_price) - costs
 )
-result = f"The restauraunt's projected daily profit is ${profit:,} pesos.".replace("$-","-$")
-st.subheader(result)
+result = f"${profit:,}".replace("$-","-$")
+st.metric("pesos profit", result)
 data = {"profit": {"$ pesos": profit}}
 df = pd.DataFrame.from_dict(data)
 if "-" in str(profit):
