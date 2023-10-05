@@ -28,7 +28,7 @@ with col2:
     profit = (
         (four_corn_dogs_sold * four_corn_dogs_price)
         + (six_corn_dogs_sold * six_corn_dogs_price)
-        + (come_todo_corn_dogs_sold * four_corn_dogs_price)
+        + (come_todo_corn_dogs_sold * come_todo_corn_dogs_price)
         + (onion_rings_sold * onion_rings_price)
         - costs
     )
